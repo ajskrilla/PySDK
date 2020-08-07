@@ -26,14 +26,14 @@ except Exception as E:
 Config = configparser.ConfigParser()
 Config.read(desktop)
     
-class tenant():
+class tenant(object):
 	tenant= ""
 	def __init__(self):
 		super(tenant, self).__init__()
 		self.tenant = Config.get('Properties', 'Tenant')
 
  #!!!!Maybe make as a variable and not a class!!!!!       
-class bearer_token():
+class bearer_token(object):
     bearer_token= ""
     def __init__(self):
         super(bearer_token, self).__init__()
@@ -47,7 +47,7 @@ headers = {
     
 }
 
-class URL():
+class URL(object):
     def __init__(self, Call, Debug=False):
         tenantID = str(tenant().tenant)
         super(URL, self).__init__()

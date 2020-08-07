@@ -13,7 +13,7 @@ pandas.set_option('display.max_rows', None)
 
 #will turn into a class
 
-def Query(SQLQuery, ExportPath=None):
+def Query(SQLQuery,Print=False, ExportPath=None):
 
 	try:
 		
@@ -28,7 +28,9 @@ def Query(SQLQuery, ExportPath=None):
 			tupr = data.keys()
 			appended_data.append(values)	
 		df = pandas.DataFrame(appended_data, columns=tupc)
-		print(df)
+
+		if Print == True:
+			print(df)
 
 		if ExportPath != None:
 			if ".csv" in ExportPath:
@@ -46,4 +48,4 @@ def Query(SQLQuery, ExportPath=None):
 
 #Example
 
-#Query(SQLQuery = """SELECT Server.DomainId, Server.DomainName, Server.ID, Server.Name FROM Server""", ExportPath = "/home/a/Desktop/testtest.csv")
+#Query(SQLQuery = """SELECT Server.DomainId, Server.DomainName, Server.ID, Server.Name FROM Server""", Print=True, ExportPath = "/home/a/Desktop/testtest.csv")
