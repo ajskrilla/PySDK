@@ -1,0 +1,36 @@
+#Example of MakeConfig:
+#MakeConfig(TenantID="ABD0458", AppID="hackerman", Scope="All", SvcAccount="apiuser@andrew.com", PW='TheBestPassword1')
+
+#Ex of Utility Classes:
+#Query_Request(SQL = """SELECT Server.DomainId, Server.DomainName, Server.ID, Server.Name FROM Server""", Debug=True)#
+#Call1 = URL(Call= "/ServerManage/AddResource").new_url
+#Other_Request(Call="/ServerManage/AddResource",Debug= True, FQDN = "Gotem.net", ComputerClass= "Unix", \
+    #Sessiontype= "Ssh", Description="Test", Name="test.test.net")
+
+#Ex of connector class:
+#Connector_Info(Print=True, ExportPath="/home/a/Desktop/test1.csv")
+
+#Ex of Query:
+#Query(SQLQuery = """SELECT Server.DomainId, Server.DomainName, Server.ID, Server.Name FROM Server""", Print=True, ExportPath = "/home/a/Desktop/testtest.csv")
+
+#Ex of Secret Class:
+#Ex on how to use clases/functions:
+#Get_Secret('test')
+#Add_Secret_Folder( Name="Test", Description="Test")
+#Delete_Secret(Secret='text')
+
+#Ex of System Classes:
+
+#Add_System(Name = "Test" ,FQDN="test.test.net", Description="test", ComputerClass="Unix", SessionType="Ssh")
+#Get_System(Name = "Test")
+#Get_System() -> Gets all systems and IDs and Domains with IDs
+#Delete_System("Test")
+
+#Ex of Account Functions:
+#Add_Account(User='Test', DomainName='test.net', Password='Password1')
+#Delete_Account(Name="Test")
+#Get_Vault_Account("testadmin")
+#Get_Vault_Account() # Returns all accounts
+
+
+
