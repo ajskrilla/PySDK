@@ -1,1 +1,3 @@
-from PySDK.PAS import *
+from PySDK.Centrify_PAS import *
+from PySDK.Make_Config import MakeConfig
+from PySDK.install import Install_Libraries
